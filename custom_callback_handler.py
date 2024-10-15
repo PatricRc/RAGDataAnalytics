@@ -1,12 +1,10 @@
-
-from streamlit import DeltaGenerator
 from langchain.callbacks import StreamlitCallbackHandler
 from langchain.schema import AgentAction
 
 class CustomStreamlitCallbackHandler(StreamlitCallbackHandler):
     """Custom callback handler for managing interactions between the agent and Streamlit."""
 
-    def __init__(self, parent_container: DeltaGenerator):
+    def __init__(self, parent_container):
         super().__init__()
         self._parent_container = parent_container
 
